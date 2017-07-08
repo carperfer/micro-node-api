@@ -1,0 +1,25 @@
+version: '2'
+services:
+    web:
+        build: .
+        volumes:
+          - "./app:/src/app"
+          - "./node-red/:/root/.node-red/"
+        ports:
+          - "3000:3000"
+        environment:
+            host: mysql
+            user: user
+            password: secret
+            database: test
+        links:
+            - mysql:mysql
+    mysql:
+        image: mysql:latest
+        environment:
+          MYSQL_ROOT_PASSWORD: secret
+          MYSQL_DATABASE: test
+          MYSQL_USER: user
+          MYSQL_PASSWORD: secret
+        ports:
+            - "3308:3306"

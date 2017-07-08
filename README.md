@@ -1,4 +1,4 @@
-# Express app with nodemon development server
+# Docker microservice NodeJS + Node-RED + MySQL
 
 Use [nodemon's](https://github.com/remy/nodemon) legacy mode to monitor file changes in your container. The app will restart, if you change any **.js**, **.json** or **.hjs** file.
 
@@ -26,7 +26,7 @@ Run `docker-compose build`. It will
 
 ## Start
 
-Run `docker-compose up` to create and start the container. The app should then be running on your docker daemon on port 3030 (On OS X you can use `boot2docker ip` to find out the IP address).
+Run `docker-compose up` to create and start the container. The app should then be running on your docker daemon on port 3000 (On OS X you can use `boot2docker ip` to find out the IP address).
 
 ## Notes on boot2docker
 
@@ -35,3 +35,12 @@ It [appears](https://github.com/boot2docker/boot2docker/issues/290) that boot2do
 ```bash
 /usr/local/bin/boot2docker ssh sudo ntpclient -s -h pool.ntp.org
 ```
+
+## MySQL
+
+
+## Start Node-RED
+
+Go to [/red](http://localhost:3000/red/)
+
+Import -> Library -> test

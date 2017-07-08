@@ -9,7 +9,6 @@ var Models = require('./models/models.js');
 
 // NODE-RED
 // Create a server
-
 var server = http.createServer(app);
 
 var settings = {

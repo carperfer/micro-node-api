@@ -11,7 +11,7 @@ setTimeout(function(){
     db.connect(function(err) {
     if (err) throw err;
 });
-}, 2000);
+}, 1000);
 
 
 module.exports = db;
